@@ -1,0 +1,30 @@
+# =========================
+# PHP project (custom)
+# =========================
+
+# Database credentials
+init.php
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# Session files
+/sessions/
+/tmp/
+
+# Uploads (if any)
+/uploads/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.old
+*~
