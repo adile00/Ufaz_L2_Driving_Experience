@@ -1,76 +1,64 @@
 # Ufaz_L2_Driving_Experience
 Backend Project 
 
+🚗 Driving Experience Tracker – Back-End Web Application
 
-🚗 Supervised Driving Experience — Back-End Web Application
+📌 Project Overview
 
-This project is a Back-End web application (PHP & MySQL) developed as part of the UFAZ Web Programming homework.
-It allows users to record, manage, and analyze supervised driving experiences, building on previous Front-End and Database projects.
+This project is a Back-End web application developed as part of the UFAZ Computer Science (L2) PHP & MySQL coursework.
+It allows users to record, analyze, and visualize supervised driving experiences, extending a previously designed Front-End and Database project.
 
-The application focuses on data integrity, usability, responsive design, and secure database interactions, without using any PHP framework.
+The application focuses on data integrity, security, usability, and responsive design, following the technical requirements provided by the instructor.
 
-🎯 Project Objectives
 
-Record a driving experience with:
+🎯 Main Features
+✅ Driving Experience Management
 
-Date, start time, end time
+Add a new driving experience with:
 
-Distance (kilometers)
+Date
+
+Start time & end time (validated)
+
+Distance in kilometers
 
 Weather conditions
 
-Speed limits
+Speed limit
 
 Traffic density
 
 Visibility conditions
 
-Multiple maneuvers (many-to-many relationship)
+Maneuvers performed (many-to-many relationship)
 
-Display a summary dashboard with:
+Edit existing driving experiences
 
-Total drives, kilometers, and hours
+Delete driving experiences
 
-Filterable driving experiences
 
-Graphical statistics (charts)
 
-Ensure the application is:
-
-Mobile-friendly
-
-Secure
-
-Easy to use and readable
-
-🧩 Features
-✅ Driving Experience Form
-
-Responsive and mobile-friendly form
-
-Default date set to today
-
-Numeric keypad for distance input
-
-Client-side validation:
-
-End time must be later than start time
-
-Maneuvers selection using a custom checkbox UI
-
-All select lists populated dynamically from the database
-
-📊 Dashboard
+📊 Dashboard & Analytics
 
 Summary statistics:
 
-Total drives
+Total number of drives
 
 Total kilometers
 
 Total driving hours
 
-Advanced filters:
+Interactive charts using Chart.js:
+
+Weather distribution
+
+Traffic density distribution
+
+Kilometers evolution over time
+
+Most performed maneuvers
+
+Filter driving experiences by:
 
 Date range
 
@@ -84,39 +72,72 @@ Visibility
 
 Maneuvers
 
-Desktop table with DataTables
 
-Sorting enabled only for date, start time, end time, and kilometers
 
-Mobile view with card-based layout
+📱 Responsive Design
 
-Interactive charts using Chart.js:
+Fully mobile-friendly
 
-Weather distribution
+Desktop:
 
-Traffic density
+DataTables for sorting & pagination
 
-Kilometers evolution by date
+Mobile:
 
-Most performed maneuvers
+Card-based layout for better readability
 
-🔐 Security & Data Integrity
+Custom CSS using Grid and Flexbox
 
-Secure database access using PDO
 
-Prepared statements (prepare, bindValue)
 
-CSRF protection for delete actions
+🧩 Technical Stack
+Back-End
 
-Session usage for ID anonymization (tokens instead of raw IDs)
+PHP 8
 
-Sensitive configuration files excluded from GitHub
+PDO (PHP Data Objects) with prepared statements
 
-🗄️ Database Design
+Secure database transactions
 
-Relational MySQL database
+Object-Oriented Programming (OOP)
 
-Normalized structure with:
+Database
+
+MySQL
+
+Normalized schema
+
+Many-to-many relationship for maneuvers
+
+JOIN queries for summaries and analytics
+
+Front-End
+
+HTML5 semantic elements
+
+CSS Grid & Flexbox
+
+Handwritten responsive CSS
+
+JavaScript (vanilla + jQuery)
+
+Chart.js
+
+DataTables
+
+Security
+
+PHP sessions
+
+CSRF protection
+
+Server-side validation
+
+Prepared SQL queries
+
+ID anonymization using tokens
+
+🗄️ Database Structure (Simplified)
 
 driving_experiences
 
@@ -130,99 +151,76 @@ visibility_conditions
 
 maneuvers
 
-experience_maneuver (many-to-many relationship)
+experience_maneuver (many-to-many)
 
-Queries use JOINs to retrieve readable labels (not IDs)
+users
 
-🛠️ Technologies Used
 
-PHP (PDO)
 
-MySQL
+🔐 Security Measures
 
-HTML5 (semantic markup)
+CSRF tokens for all POST requests
 
-CSS3 (Grid & Flexbox)
+Session-based token verification
 
-JavaScript
+Server-side validation for:
 
-jQuery
+Dates
 
-DataTables
+Time consistency
 
-Chart.js
+Numeric inputs
 
-No PHP frameworks (Laravel, Symfony, etc.) were used.
+Prepared SQL statements to prevent SQL injection
 
-📱 Responsive Design
 
-Optimized for:
 
-Desktop
-
-Tablet
-
-Mobile
-
-Mobile-specific layouts:
-
-Card view for driving experiences
-
-Touch-friendly inputs and buttons
-
-Tested using browser inspect tools
-
-🚀 Deployment
+🌐 Deployment
 
 Hosted on AlwaysData
 
-Publicly accessible URL (no authentication required)
+Public URL provided for evaluation
 
-GitHub repository contains:
+Database credentials secured
 
-Full source code
+Password masked for repository submission
 
-README
 
-.gitignore
 
-Example configuration file
-
-📁 Repository Structure
+📂 Repository Structure
 /
-├── dashboard.php
 ├── form.php
 ├── insert.php
+├── dashboard.php
 ├── edit.php
 ├── delete.php
-├── nav.php
-├── DrivingExperience.php
+├── init.php
 ├── csrf.php
 ├── id_token.php
-├── init.example.php
+├── DrivingExperience.php
+├── success.php
+├── nav.php
 ├── assets/
-│   └── background images
+│   └── background1.avif
 ├── README.md
-└── .gitignore
 
-📝 Notes for Evaluation
 
-The project strictly follows the teacher’s technical requirements
 
-Emphasis on:
+🧪 Evaluation Criteria Coverage
 
-Clean code
+✔ PDO with prepared statements
+✔ OOP implementation
+✔ Many-to-many relationship
+✔ Responsive web form
+✔ Secure data handling
+✔ Graphical analytics
+✔ Mobile & desktop views
+✔ Filtering & sorting
+✔ Remote hosting
 
-Secure queries
 
-Database integrity
-
-UX & ergonomics
-
-Designed to be clear and easy to evaluate by peers
-
-👩‍💻 Author
+✍️ Author
 
 Adelya
-Computer Science student — UFAZ
-Backend development & cybersecurity oriented
+Computer Science Student – UFAZ
+Course: PHP & MySQL Back-End Development
